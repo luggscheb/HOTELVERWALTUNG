@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converter="clr-namespace:HotelMAUIApp.Models.Converter"
+             x:Class="HotelMAUIApp.Views.ShowRooms"
+             Title="ShowRooms">
+
+    <ContentPage.Resources>
+        <!-- definieren eine Instanz unseres CategoryConverters -->
+        <converter:CategoryConverter x:Key="categoryConverter" />
+    </ContentPage.Resources>
+
+    <VerticalStackLayout>
+        
+        
+        <CollectionView ItemsSource="{Binding Rooms}">
+            <CollectionView.ItemsLayout>
+            <GridItemsLayout Span="2" Orientation="Vertical" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <VerticalStackLayout>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0"
+                               Grid.Row="0"
+                               Text="{Binding RoomId}"
+                               FontAttributes="Bold" />
+                        <Label Grid.Column="0"
+                               Grid.Row="1"
+                               Text="{Binding Name}"
+                               FontAttributes="Bold" />
+                        <Label Grid.Column="0"
+                               Grid.Row="2"
+                               Text="{Binding Kategorie}"
+                               FontAttributes="Italic"
+                               VerticalOptions="End" />
+                    </Grid>
+                </VerticalStackLayout>
+             </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+        <Button Text="Lade Daten" 
+                Command="{Binding CmdShowArticle}"
+                HorizontalOptions="Center"
+                Grid.ColumnSpan="2" 
+                Grid.Row="6" Grid.Column="0" VerticalOptions="Center" Padding="20" />
+    </VerticalStackLayout>
+</ContentPage>

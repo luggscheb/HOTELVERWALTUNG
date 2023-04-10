@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="HotelMAUIApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:HotelMAUIApp.Views"
+    >
+
+    <FlyoutItem Title="Home">
+        <Tab>
+        <ShellContent
+                Title="Hauptseite"
+                ContentTemplate="{DataTemplate views:MainPage}"
+                Route="MainPage" />
+        </Tab>  
+    </FlyoutItem>
+    <FlyoutItem Title="About Us">
+        <Tab>
+            <ShellContent
+                Title="Über Uns"
+                ContentTemplate="{DataTemplate views:AboutUs}"
+                Route="AboutUs" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Show all rooms">
+        <Tab>
+            <ShellContent
+                Title="Zeige alle Räume"
+                ContentTemplate="{DataTemplate views:ShowRooms}"
+                Route="ShowRooms" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Register new customer">
+        <Tab>
+            <ShellContent
+                Title="Registriere neuen Kunden"
+                ContentTemplate="{DataTemplate views:AddUser}"
+                Route="RegCustomer" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Add Reservation">
+        <Tab>
+            <ShellContent
+                Title="Neue Reservierung hinzufügen"
+                ContentTemplate="{DataTemplate views:AddReservation}"
+                Route="RegRoom" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Show Reservation">
+        <Tab>
+            <ShellContent
+                Title="Zeige alle Reservierungen"
+                ContentTemplate="{DataTemplate views:ShowBills}"
+                Route="RegRoom" />
+        </Tab>
+    </FlyoutItem>
+
+
+
+</Shell>

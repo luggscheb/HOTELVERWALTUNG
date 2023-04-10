@@ -1,0 +1,12 @@
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\bin\Debug\net7.0\Hotel.deps.json
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\bin\Debug\net7.0\Hotel.dll
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\bin\Debug\net7.0\Hotel.pdb
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\obj\Debug\net7.0\Hotel.csproj.AssemblyReference.cache
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\obj\Debug\net7.0\Hotel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\obj\Debug\net7.0\Hotel.AssemblyInfoInputs.cache
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\obj\Debug\net7.0\Hotel.AssemblyInfo.cs
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\obj\Debug\net7.0\Hotel.csproj.CoreCompileInputs.cache
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\obj\Debug\net7.0\Hotel.dll
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\obj\Debug\net7.0\refint\Hotel.dll
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\obj\Debug\net7.0\Hotel.pdb
+C:\Schual\.NET_SWP\2022\HotelVerwaltung\Hotel\obj\Debug\net7.0\ref\Hotel.dll

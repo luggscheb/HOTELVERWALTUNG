@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelMAUIApp.Views.AddUser"
+             Title="AddUser">
+    
+    
+    <Grid RowDefinitions="4*, 2*, 2*, 2*, 2*, 2*, 4*" ColumnDefinitions="40*, 60*"
+          Margin="20, 30, 40, 50">
+
+        <Label FontSize="Header" Text="User Registrieren" HorizontalTextAlignment="Center" 
+               Grid.ColumnSpan="2"
+               Grid.Row="0" Grid.Column="0" />
+
+        <Label Text="Zuname" HorizontalTextAlignment="End" 
+               Grid.Row="1" Grid.Column="0"
+               VerticalOptions="Center" Padding="15" />
+        <!-- über Binding kann das Property der VM-Klasse angegeben werden - mit
+                diesem Property ist die Text-Eigenschaft dann verbunden -->
+        <Entry Placeholder="Zuname" 
+               Text="{Binding VorName}"
+               Grid.Row="1" Grid.Column="1" 
+               VerticalOptions="Center" />
+
+        <Label Text="Nachname" HorizontalTextAlignment="End" 
+               Grid.Row="2" Grid.Column="0"
+               VerticalOptions="Center" Padding="15" />
+        <Entry Placeholder="Nachname" 
+               Text="{Binding NachName}"
+               Grid.Row="2" Grid.Column="1" 
+               VerticalOptions="Center" />
+
+        
+
+        <Label Text="Geburtsdatum" HorizontalTextAlignment="End" 
+               Grid.Row="3" Grid.Column="0"
+               VerticalOptions="Center" Padding="15" />
+        <DatePicker 
+               Date ="{Binding Alter}"
+               Grid.Row="3" Grid.Column="1" 
+               VerticalOptions="Center" />
+
+        <Label Text="Email" HorizontalTextAlignment="End" 
+               Grid.Row="4" Grid.Column="0"
+               VerticalOptions="Center" Padding="15" />
+        <Entry 
+               Text ="{Binding Email}"
+               Grid.Row="4" Grid.Column="1" 
+               VerticalOptions="Center" />
+
+        <Button Text="Registrieren" 
+                Command="{Binding CmdCreateCustomer}"
+                HorizontalOptions="Center"
+                Grid.ColumnSpan="2" 
+                Grid.Row="5" Grid.Column="0" VerticalOptions="Center" Padding="20" />
+
+        <Button Text="Zurücksetzen" 
+                Command="{Binding CmdResetCustomer}"
+                HorizontalOptions="Center"
+                Grid.ColumnSpan="2" 
+                Grid.Row="5" Grid.Column="2" VerticalOptions="Center" Padding="20" />
+
+        <Label Text="{Binding ResponseText}" 
+               HorizontalTextAlignment="End" 
+               Grid.Row="6" Grid.Column="1"
+               VerticalOptions="Center" Padding="15" />
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelMAUIApp.Views.AddReservation"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <Label Text="Kunde"  
+               
+               VerticalOptions="Center" Padding="15" />
+        <Picker ItemsSource="{Binding AllCustomers}"
+                SelectedItem="{Binding customer}"
+                ItemDisplayBinding="{Binding NachName}"
+                Grid.Row="3" Grid.Column="1" 
+                VerticalOptions="Center">
+        </Picker>
+
+        <Label Text="Raum"  
+               
+               VerticalOptions="Center" Padding="15" />
+        <Picker ItemsSource="{Binding AllRooms}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding room}"
+                
+                VerticalOptions="Center">
+        </Picker>
+
+        <Label Text="Start Datum" 
+               
+               VerticalOptions="Center" Padding="15" />
+        <DatePicker 
+               Date ="{Binding startdate}"
+               Grid.Row="4" Grid.Column="1" 
+               VerticalOptions="Center" />
+
+        <Label Text="End Datum" 
+               
+               VerticalOptions="Center" Padding="15" />
+        <DatePicker 
+               Date ="{Binding enddate}"
+               Grid.Row="4" Grid.Column="1" 
+               VerticalOptions="Center" />
+
+
+        <Button Text="Registrieren" 
+                Command="{Binding CmdCreateReservation}"
+                HorizontalOptions="Center"
+                Grid.ColumnSpan="2" 
+                Grid.Row="6" Grid.Column="0" VerticalOptions="Center" Padding="20" />
+
+        <Button Text="Zurücksetzen" 
+                Command="{Binding CmdResetReservation}"
+                HorizontalOptions="Center"
+                Grid.ColumnSpan="2" 
+                Grid.Row="6" Grid.Column="2" VerticalOptions="Center" Padding="20" />
+
+        <Label Text="{Binding ResponseText}" 
+               HorizontalTextAlignment="End" 
+               Grid.Row="6" Grid.Column="1"
+               VerticalOptions="Center" Padding="15" />
+    </VerticalStackLayout>
+</ContentPage>
